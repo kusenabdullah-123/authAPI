@@ -1,5 +1,8 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
-app.listen(5000, () => {
-  console.log("http://localhost:5000");
+const users = require("./model/users/users.controllers");
+app.use(users);
+app.listen(process.env.PORT, () => {
+  console.log(`http://localhost:${process.env.PORT}`);
 });
