@@ -1,0 +1,8 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "Autentikasi API",
+  "main": "index.js",
+  "author": "M Kusen A",
+  "license": "MIT"
+}
