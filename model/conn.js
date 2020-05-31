@@ -14,5 +14,5 @@ conn.connect((err) => {
   console.log("connected");
 });
 conn.query = util.promisify(conn.query);
-
+conn.escape = util.promisify(conn.escape);
 module.exports = conn;

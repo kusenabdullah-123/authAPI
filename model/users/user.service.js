@@ -1,4 +1,15 @@
 const promise = require("../promise");
 module.exports = {
-  getUsers: promise("SELECT * FROM ??", ["users"]),
+  getUsers: ({ user, pass }) => {
+    return promise("SELECT ??,??,?? FROM ?? WHERE ??=? AND ??=?", [
+      "nama",
+      "username",
+      "password",
+      "users",
+      "username",
+      user,
+      "password",
+      pass,
+    ]);
+  },
 };
