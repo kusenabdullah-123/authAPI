@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { getUsers } = require("./user.service");
+const { getUsers } = require("../model/users/user.service");
 router.get("/users", async (req, res) => {
   try {
     const data = await getUsers({ user: "kusen", pass: "kusen" });
